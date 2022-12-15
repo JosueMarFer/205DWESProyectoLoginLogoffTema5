@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+body {
+    background: #1B1B32;
+}
+
+main br {
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 16vh;
+    background: #0A0A23;
+    position: fixed;
+    top: 0px;
+    border-bottom: rgb(255, 255, 255, 0.1) 0.1rem solid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+}
+
+header :nth-child(1) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 3rem;
+}
+
+header :nth-child(2) {
+    grid-row: 2/3;
+    grid-column: 4/5;
+}
+
+main {
+    background: #1B1B32;
+    margin-top: 16vh;
+    margin-bottom: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main * {
+    margin: 2%;
+}
+
+main h2 {
+    font-size: 2rem;
+}
+
+hr {
+    border: 0;
+    padding: 0;
+}
+
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.codeLines {
+    background: white;
+    text-align: left;
+    overflow: auto;
+    width: 100%;
+    height: 68vh;
+    padding: 2rem;
+}
+
+.codeLines code {
+    margin: 0;
+}
+
+section {
+    width: 70%;
+    padding: 2rem;
+    background: #0A0A23;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section a {
+    width: 100%;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    background: #1B1B32;
+    border: solid transparent 0.1rem;
+}
+
+section a h3 {
+    text-align: left;
+}
+
+section a:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+    border: black solid 0.1rem;
+    z-index: 1;
+    box-shadow: 0rem 0rem 0.5rem 0.3rem white inset;
+}
+
+table {
+    width: 70%;
+    padding: 0.5rem;
+    background: #0A0A23;
+}
+
+.filaVacia td {
+    border: 0;
+    padding: 0;
+    height: 0.5rem;
+}
+
+th {
+    border: 0.3rem solid white;
+    padding: 0.5rem;
+}
+
+td {
+    border: 0.15rem solid white;
+    padding: 0.5rem;
+}
+
+td img {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tabla td:nth-child(n+2):hover {
+    filter: invert(100%) drop-shadow(0rem 0rem 0.2rem white);
+    border-color: black;
+    background-color: rgb(0, 0, 0, 0.1);
+    z-index: 1;
+    box-shadow: 0rem 0rem 0.5rem 0rem black inset;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+}
+
+.formElement {
+    display: block;
+    width: 100%;
+    margin: 1rem;
+}
+
+.formElement label {
+    display: block;
+    margin: 0.5rem;
+}
+
+.formElement input {
+    display: inline-block;
+    color: black;
+    margin: 0.5rem;
+}
+
+.formElement select{
+    color: black;
+}
+
+.formElement option{
+    color: black;
+}
+
+.formElement p {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.formElement input[type="submit"] {
+    display: inline-block;
+    color: black;
+    margin: 0.5rem;
+}
+
+
+.obligatorio {
+    background: yellow;
+}
+
+.opcional {
+}
+
+.bloqueado {
+}
+
+
+.return {
+    position: fixed;
+    top: 16vh;
+    right: 2vw;
+}
+
+.return img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.return img:hover {
+    filter: invert(100%) drop-shadow(0rem 0rem 0.2rem white);
+}
+
+.return2 {
+    position: fixed;
+    top: 16vh;
+    right: 2vw;
+    filter: invert(100);
+}
+
+.return2 img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.return2 img:hover {
+    filter: invert(100%) drop-shadow(0rem 0rem 0.2rem white);
+}
+
+footer {
+    width: 100vw;
+    height: 12vh;
+    background: #0A0A23;
+    position: fixed;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-top: rgb(255, 255, 255, 0.1) 0.1rem solid;
+    z-index: 2;
+}
+
+footer img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+footer img:hover {
+    filter: invert(100%) drop-shadow(0rem 0rem 0.2rem white);
+
+}
+
+.footerIcons {
+    grid-column: 1/ 2;
+}
+
+.home {
+    grid-column: 5/ 7;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+}
+
+.home a {
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: start;
+}
+
+.home p {
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: end;
+}
+
+
+
+
