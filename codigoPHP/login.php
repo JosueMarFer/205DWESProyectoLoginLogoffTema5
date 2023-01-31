@@ -1,7 +1,7 @@
 <?php
 //@author Josue Martinez Fernandez
 //@version 1.0
-//ultima actualizacion 30/11/2022
+//ultima actualizacion 09/01/2023
 //Importacion del fichero de conexion
 //El fichero se selecciona en base al host en el que se ejecute el programa
 if ($_SERVER['HTTP_HOST'] == 'daw205.ieslossauces.es') {
@@ -21,6 +21,10 @@ $aErrores = [
     'codUsuario' => '',
     'password' => ''
 ];
+//Si se ha pulsado el boton de registro valida los campos (tambien en la BBDD)
+if (isset($_REQUEST['registrar'])) {
+    header('Location: ./registro.php');
+}
 //Define e inicializa la variable encargada de comprobar si los datos estan validados
 $entradaOK = true;
 //Si se ha pulsado el boton de enviar valida los campos (tambien en la BBDD)
@@ -30,7 +34,7 @@ if (isset($_REQUEST['enviar'])) {
     $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, 1);
 //Recorre el array de errores y en caso de tener alguno la variable que comprueba la entrada pasa a ser false
     foreach ($aErrores as $errorIndex => $errorValue) {
-        if (!is_null($errorValue)) {
+        if (isset($errorValue)) {
             $entradaOK = false;
         }
     }
@@ -44,7 +48,7 @@ if (isset($_REQUEST['enviar'])) {
             $buscaLogin->execute();
             if ($buscaLogin->rowCount() == 0) {
                 $entradaOK = false;
-                $aErrores['password'] = 'El usuario o la contraseña no existen';
+                $aErrores['password'] = 'El usuario no existe o la contraseña es erronea';
             }
             $oUsuario = $buscaLogin->fetchObject();
         } catch (Exception $e) {
@@ -174,7 +178,7 @@ if (isset($_REQUEST['enviar'])) {
                                 <fieldset>
                                     <legend>Login</legend>
                                     <div class="formElement">
-                                        <label for="codUsuario">Usuario:</label>
+                                        <label for="codUsuario">Codigo de usuario:</label>
                                         <input type="text" id="codUsuario" name="codUsuario"/>
                                         <?php (!is_null($aErrores['codUsuario'])) ? print '<p style="color: red; display: inline;">' . $aErrores['codUsuario'] . '</p>' : ''; ?>
                                     </div>
@@ -193,6 +197,10 @@ if (isset($_REQUEST['enviar'])) {
                                     </div>
                                     <div class="formElement">
                                         <input type="submit" value="Enviar" name="enviar" />
+                                    </div>
+                                    <div class="formElement">                                    
+                                    <p>¿Aún no tienes un usuario? Registrate:</p>
+                                        <input type="submit" value="Registrar" name="registrar" />
                                     </div>
                                 </fieldset>
                             </form>

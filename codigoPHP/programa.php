@@ -1,7 +1,7 @@
 <?php
 //@author Josue Martinez Fernandez
 //@version 1.0
-//ultima actualizacion 30/11/2022
+//ultima actualizacion 09/01/2023
 //Si la sesion no tiene guardado el array referente al login no ha sido correctamente logueado y te redirige el login
 session_start();
 if (!isset($_SESSION['205DWESProyectoLoginLogoffTema5']) || is_null($_SESSION['205DWESProyectoLoginLogoffTema5'])) {
@@ -29,12 +29,12 @@ if (isset($_REQUEST['detalle'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../webroot/css/style.css">
-        <title>Login 205ProyectoLoginLogoff</title>
+        <title>Programa 205ProyectoLoginLogoff</title>
     </head>
     <body>
         <header>
             <h1>&lt;/DWES&gt;</h1>
-            <h2>Proyecto Tema 5 LoginLogoff Login</h2>
+            <h2>Proyecto Tema 5 LoginLogoff Programa</h2>
         </header>
         <main>
             <section>
@@ -73,11 +73,11 @@ if (isset($_REQUEST['detalle'])) {
                 }
                 ?>
                 <form name="ProyectoLoginLogoffTema5Programa" action="./<?php echo basename($_SERVER['PHP_SELF']); ?>" method="post">
-                    <div class="formElement">
-                        <input type="submit" value="Salir" name="salir" />
+                    <div class="formElement">             
+                        <input type="submit" value="Detalle" name="detalle" />
                     </div>
                     <div class="formElement">
-                        <input type="submit" value="Detalle" name="detalle" />
+                        <input type="submit" value="Salir" name="salir" />
                     </div>
                 </form>
             </section>
