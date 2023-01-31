@@ -21,12 +21,12 @@ if (isset($_REQUEST['volver'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../webroot/css/style.css">
-        <title>Login 205ProyectoLoginLogoff</title>
+        <title>Detalle 205ProyectoLoginLogoff</title>
     </head>
     <body>
         <header>
             <h1>&lt;/DWES&gt;</h1>
-            <h2>Proyecto Tema 5 LoginLogoff Login</h2>
+            <h2>Proyecto Tema 5 LoginLogoff Detalle</h2>
         </header>
         <main>
             <section>

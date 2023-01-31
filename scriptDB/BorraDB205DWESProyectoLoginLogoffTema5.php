@@ -63,7 +63,7 @@
             <div class="footerIcons">
                 <a href="../doc/curriculum.pdf" target="_blank"><img src="../webroot/images/curriculum.png"
                                                                      alt="Imagen curriculum"></a>
-                <a href="https://github.com/JosueMarFer/205DWESProyectoTema5" target="_blank"><img
+                <a href="https://github.com/JosueMarFer/205DWESProyectoLoginLogoffTema5" target="_blank"><img
                         src="../webroot/images/github.png" alt="Imagen github"></a>
             </div>
             <div class="home">
